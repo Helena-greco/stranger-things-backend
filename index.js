@@ -7,17 +7,17 @@ const StrangerThingsRepository = require('./data/repository/StrangerThings');
 const StrangerThingsService = require('./services/StrangerThings');
 
 const app = express();
-const upsidedownMode = process.env.UPSIDEDOWN_MODE === 'true';
 
 const strangerThingsRepository = new StrangerThingsRepository(
   strangerThingsDataset,
-);
-const strangerThingsService = new StrangerThingsService(
-  strangerThingsRepository,
-);
-
-app.use(cors());
-
+  );
+  const strangerThingsService = new StrangerThingsService(
+    strangerThingsRepository,
+    );
+    
+    app.use(cors());
+    
+const upsidedownMode = process.env.UPSIDEDOWN_MODE === 'true';
 const hereIsTheUpsideDown = upsidedownMode;
 const PORT = process.env.PORT || 3000;
 
