@@ -17,7 +17,7 @@ const strangerThingsRepository = new StrangerThingsRepository(
     
     app.use(cors());
     
-const upsidedownMode = process.env.UPSIDEDOWN_MODE === 'true';
+const upsidedownMode = process.env.UPSIDEDOWN_MODE;
 const hereIsTheUpsideDown = upsidedownMode;
 const PORT = process.env.PORT || 3000;
 
